@@ -4,12 +4,12 @@ metadata:
   name: nginx-ingress
 spec:
   rules:
-  - http:
-      paths:
-      - path: /nginx
-        pathType: Prefix
-        backend:
-          service:
-            name: nginx-svc
-            port:
-              number: 8080
+    - http:
+        paths:
+        - path: /nginx
+          pathType: Prefix
+          backend:
+            service:
+              name: nginx-svc
+              port:
+                number: 8080
