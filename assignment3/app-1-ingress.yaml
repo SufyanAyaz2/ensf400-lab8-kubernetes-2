@@ -2,9 +2,11 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: app-1-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/canary: "true"
+    nginx.ingress.kubernetes.io/canary-weight: "70"
 spec:
   rules:
-  # - host: app-1-svc.default.svc.cluster.local
     - http:
         paths:
         - path: /app
@@ -14,9 +16,9 @@ spec:
               name: app-1-svc
               port:
                 number: 2223
-  ingressClassName: nginx
-  defaultBackend:
-    service:
-      name: app-1-svc
-      port:
-        number: 2223
+  # ingressClassName: nginx
+  # defaultBackend:
+  #   service:
+  #     name: app-1-svc
+  #     port:
+  #       number: 80

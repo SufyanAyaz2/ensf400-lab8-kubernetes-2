@@ -16,9 +16,9 @@ spec:
               name: app-2-svc
               port:
                 number: 2224
-  ingressClassName: nginx
-  defaultBackend:
-    service:
-      name: app-2-svc
-      port:
-        number: 2224
+  # ingressClassName: nginx
+  # defaultBackend:
+  #   service:
+  #     name: app-2-svc
+  #     port:
+  #       number: 80

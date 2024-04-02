@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: app-2-dep
+  name: app-2
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: app-2
